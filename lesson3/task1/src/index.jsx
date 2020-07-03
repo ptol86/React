@@ -22,5 +22,5 @@ const Search = (props) => {
 
     
 
-ReactDOM.render(<Search name="Bob" age={17}/>, rootElement);
+ReactDOM.render(<Search name="Tom"/>, rootElement);
 
