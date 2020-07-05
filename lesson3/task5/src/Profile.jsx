@@ -5,7 +5,7 @@ import moment from "moment";
 const Profile = (props) => { 
         
     console.log(props)
-    const age = moment(props.userData.birthDate).format("d MMM YY");
+    const age = moment(props.userData.birthDate).format("DD MMM YY");
     return (
         <div className="profile">
             <div className="profile__name">
