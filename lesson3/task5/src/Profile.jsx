@@ -5,22 +5,15 @@ import {Component} from "react";
 class Profile extends Component { 
     
     render() {
-        const userData = {
-            firstName: 'John',
-            lastName: 'Doe',
-            birthDate: '1991-01-17T11:11:11.819Z',
-            birthPlace: 'London'
-        };
-        const age = moment(userData.birthDate).format("d MMM YY");
-        console.log(age)
+        const age = moment(this.props.birthDate).format("d MMM YY");
         
         return (
             <>
             <div className="profile__name">
-                {`${userData.firstName} ${userData.lastName}`}
+                {`${this.props.firstName} ${this.props.lastName}`}
             </div>
             <div className="profile__birth">
-                {`Was born ${age} in ${userData.birthPlace}`}
+                {`Was born ${age} in ${this.props.birthPlace}`}
             </div>
             </>
         );
