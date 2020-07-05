@@ -8,14 +8,14 @@ class Profile extends Component {
         const age = moment(this.props.birthDate).format("d MMM YY");
         
         return (
-            <>
-            <div className="profile__name">
-                {`${this.props.firstName} ${this.props.lastName}`}
+            <div className="profile">
+                <div className="profile__name">
+                    {`${this.props.firstName} ${this.props.lastName}`}
+                </div>
+                <div className="profile__birth">
+                    {`Was born ${age} in ${this.props.birthPlace}`}
+                </div>
             </div>
-            <div className="profile__birth">
-                {`Was born ${age} in ${this.props.birthPlace}`}
-            </div>
-            </>
         );
     };
 }
