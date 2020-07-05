@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
-    "start:debug":"webpack-dev-server -d --devtool eval-source-map --open",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "start:debug":"webpack-dev-server -d --devtool eval-source-map --open"
   },
   "keywords": [],
   "author": "",
