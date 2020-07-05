@@ -10,10 +10,11 @@ const user = {
     birthDate: new Date('2001-01-01T11:11:11.819Z'),
 }
 
-const age = (userBirthDate) => {
-    return new Date().getFullYear() - userBirthDate.getFullYear();
+const age = (birthDate) => {
+    return new Date('2018-01-01T11:11:11.819Z').getFullYear() - birthDate.getFullYear();
    
-}
+  }
+
 
 const Greeting = (props) => {
     console.log(props)
