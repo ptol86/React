@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./index.scss";
+import moment from "moment";
 
 const rootElement = document.querySelector('#root');
 
@@ -10,18 +11,17 @@ const user = {
     birthDate: new Date('2001-01-01T11:11:11.819Z'),
 }
 
-const age = (birthDate) => {
-    return new Date('2018-01-01T11:11:11.819Z').getFullYear() - birthDate.getFullYear();
-   
-  }
+
 
 
 const Greeting = (props) => {
-    console.log(props)
-
+    
+    const age =  moment().diff(moment(props.birthDate), 'years');
+    console.log(age)
+    
     return (
         <div className="greeting">
-            {`My name is ${props.firstName} ${props.lastName}. I'm ${age(props.birthDate)} years old`}
+            {`My name is ${props.firstName} ${props.lastName}. I'm ${age} years old`}
         </div>
     );
 };
