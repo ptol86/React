@@ -9,15 +9,17 @@ body {
 }
 
 .profile__name {
-    color: greenyellow;
-    margin: auto 10px;
+    display: inline-flex;
+    color: rgb(111, 60, 204);
+    margin: 10px 10px;
     padding: 8px;
     border: 3px solid rgb(190, 70, 70);
 }
 
 .profile__birth {
+    display: inline-flex;
     color: orangered;
-    margin: auto 10px;
+    margin: 10px;
     padding: 8px;
     border: 3px solid rgb(50, 211, 71);
 }
