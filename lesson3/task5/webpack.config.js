@@ -30,7 +30,6 @@ module.exports = (env, argv) => {
     },
     plugins: [
       
-      new webpack.EvalSourceMapDevToolPlugin({}),
       new webpack.ProgressPlugin(),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
