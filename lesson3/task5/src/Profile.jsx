@@ -4,15 +4,15 @@ import moment from "moment";
 
 const Profile = (props) => { 
         
-    const age = moment(props.birthDate).format("d MMM YY");
-    
+    console.log(props)
+    const age = moment(props.userData.birthDate).format("d MMM YY");
     return (
         <div className="profile">
             <div className="profile__name">
-                {`${props.firstName} ${props.lastName}`}
+                {`${props.userData.firstName} ${props.userData.lastName}`}
             </div>
             <div className="profile__birth">
-                {`Was born ${age} in ${props.birthPlace}`}
+                {`Was born ${age} in ${props.userData.birthPlace}`}
             </div>
         </div>
     );
