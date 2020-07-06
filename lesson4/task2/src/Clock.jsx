@@ -2,18 +2,21 @@ import React from 'react';
 import {Component} from "react";
 import "./clock.scss";
 import moment from 'moment';
-import "moment-timezone";
 
-let counter = 0;
+const getTimeWithOffset = offset => {
+    const currentTime = new Date();
+    const utcOffset = currentTime.getTimezoneOffset() / 60;
+    return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+}
 class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: moment().tz(props.offset).format("h:mm:ss A"),
+            time: moment(getTimeWithOffset(props.offset)).format("h:mm:ss A"),
         };
         setInterval(() => {
             this.setState({
-                time: moment().tz(props.offset).format("h:mm:ss A")
+                time: moment(getTimeWithOffset(props.offset)).format("h:mm:ss A")
             })
         }, 1000);
         

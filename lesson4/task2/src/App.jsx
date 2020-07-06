@@ -4,9 +4,9 @@ import Clock from './Clock'
 const App = () => {
     return (
         <>
-        <Clock location ={"New York"} offset ={"America/New_York"}/>
-        <Clock location ={"Kyiv"} offset ={"Europe/Moscow"}/>
-        <Clock location ={"London"} offset ={"Europe/London"}/>
+        <Clock location ={"New York"} offset ={-5}/>
+        <Clock location ={"Kyiv"} offset ={2}/>
+        <Clock location ={"London"} offset ={0}/>
         </>
     )
 }
