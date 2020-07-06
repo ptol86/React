@@ -1,27 +1,29 @@
 import React from 'react';
 
 class Toggler extends React.Component {
-    handleClick(e) {
-        if (e.target.textContent === "Off") {
-            
-            e.target.textContent = "On";
-        } else {
-            e.target.textContent = "Off";
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            button: "Off",
         }
     }
-
+    changeBtnText = () => {
+        this.setState((state, props) => {
+            return {button: state.button === "Off"
+                    ? "On"
+                    : "Off"
+        };
+          });;
+    }
     render() {
         return (
-            
             <button 
-                onClick={this.handleClick}
+                onClick={this.changeBtnText}
                 className="toggler"
-
             >
-            Off
+                {this.state.button}
             </button>
-                
-            
         )
     }
 }
