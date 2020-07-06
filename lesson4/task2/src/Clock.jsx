@@ -5,16 +5,15 @@ import moment from 'moment';
 import "moment-timezone";
 
 let counter = 0;
-
 class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: moment().tz(props.timezone).format("h:mm:ss A"),
+            time: moment().tz(props.offset).format("h:mm:ss A"),
         };
         setInterval(() => {
             this.setState({
-                time: moment().tz(props.timezone).format("h:mm:ss A")
+                time: moment().tz(props.offset).format("h:mm:ss A")
             })
         }, 1000);
         
@@ -23,7 +22,7 @@ class Clock extends Component {
         return (
         <div className="clock">
             <div className="clock__location">
-                {this.props.city}
+                {this.props.location }
             </div>
             <div className="clock__time">
                 {this.state.time}
@@ -35,8 +34,3 @@ class Clock extends Component {
 
 export default Clock;
 
-const getTimeWithOffset = offset => {
-    const currentTime = new Date();
-    const utcOffset = currentTime.getTimezoneOffset() / 60;
-    return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
-}
