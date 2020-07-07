@@ -6,7 +6,7 @@ const Mailbox = ({ unreadMessages }) => {
             <span className="mailbox__text">Messages</span>
             {
                 unreadMessages.length > 0 && (
-                    <span className="mailbox__count">{ureadMessages.length}</span>
+                    <span className="mailbox__count">{unreadMessages.length}</span>
                 )
             }
         </div>)
