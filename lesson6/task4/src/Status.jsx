@@ -28,7 +28,7 @@ class Status extends React.Component {
             <div className="status">
                 <>   
                     {this.state.isOnline
-                    ?<Online onLogin={this.onLogin}/>
+                    ?<Online />
                     :<Offline onLogout={this.onLogout}/>
                     }   
                 </>
