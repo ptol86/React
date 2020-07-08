@@ -42,7 +42,7 @@ class UsersList extends React.Component {
                 totalItems={users.length}/>
             <ul className="users">
                 {usersToShow.map(user => {
-                    return <User name={user.name} age={user.age}/>
+                    return <User key={user.id} name={user.name} age={user.age}/>
                 }
                 )}
             </ul>

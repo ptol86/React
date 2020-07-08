@@ -40,7 +40,17 @@ const users = [
         name: "Maria",
         age: 35,
         id: 'id-6'
-    }
+    },
+    {
+        name: "Joseph",
+        age: 56,
+        id: 'id-7'
+    },
+    {
+        name: "Jane",
+        age: 13,
+        id: 'id-8'
+    },
     
 ];
 
