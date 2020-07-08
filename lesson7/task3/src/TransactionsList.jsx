@@ -6,11 +6,10 @@ class TransactionsList extends React.Component {
     
     render() {
         
-        const transactionsListCopy = this.props.transactionsList.slice()
         
         return (
             <ul className="transactions">
-            {transactionsListCopy.map(transaction => 
+            {this.props.transactionsList.map(transaction => 
                 <Transaction key={transaction.id} {...transaction}/>)}
             </ul>
         )
