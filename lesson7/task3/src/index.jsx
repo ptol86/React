@@ -33,7 +33,7 @@ const transactions = [
 ];
 
 ReactDOM.render(
-    <TransactionsList transactionsList={transactions}/>,
+    <TransactionsList transactions={transactions}/>,
     rootElement
 );
 

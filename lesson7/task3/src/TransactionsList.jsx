@@ -9,7 +9,7 @@ class TransactionsList extends React.Component {
         
         return (
             <ul className="transactions">
-            {this.props.transactionsList.map(transaction => 
+            {this.props.transactions.map(transaction => 
                 <Transaction key={transaction.id} {...transaction}/>)}
             </ul>
         )
