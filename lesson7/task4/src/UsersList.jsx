@@ -11,7 +11,7 @@ import Pagination from './Pagination';
 class UsersList extends React.Component {
     state = {
         currentPage: 0,
-        itemsPerPage: 4,
+        itemsPerPage: 3,
         }
     
     goNext = () => {
