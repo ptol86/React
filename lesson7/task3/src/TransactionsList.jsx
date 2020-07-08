@@ -6,7 +6,7 @@ class TransactionsList extends React.Component {
     
     render() {
         
-        const transactionsListCopy = this.props.transactionsList
+        const transactionsListCopy = this.props.transactionsList.slice()
         
         return (
             <ul className="transactions">
