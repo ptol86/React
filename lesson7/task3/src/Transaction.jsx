@@ -7,7 +7,7 @@ const Transaction = ({from, to, amount, rate, time}) => {
         <li className="transaction">
             <span className="transaction__date">{moment(time).format("DD MMM")}</span>
             <span className="transaction__time">{moment(time).format("MM HH")}</span>
-            <span className="transaction__assets">{from} → {to}</span>
+            <span className="transaction__assets">{`${from} → ${to}`}</span>
             <span className="transaction__rate">{rate}</span>
             <span className="transaction__amount">{amount}</span>
         </li>
@@ -15,5 +15,5 @@ const Transaction = ({from, to, amount, rate, time}) => {
         
 };
     
-    export default Transaction;
+export default Transaction;
 
