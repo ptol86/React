@@ -4,7 +4,7 @@ class ConnectionStatus extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            status: "Online",
+            status: "online",
         }
     }
     componentDidMount() {
@@ -17,12 +17,12 @@ class ConnectionStatus extends React.Component {
     }
     handleStatusOnline = () => {
         this.setState ({
-            status: "Online"
+            status: "online"
         });
     }
     handleStatusOffline = () => {
         this.setState ({
-            status: "Offline"
+            status: "offline"
         });
     }
 
@@ -31,7 +31,7 @@ class ConnectionStatus extends React.Component {
         const {status} = this.state;
 
         return (
-            <div className={`status${status === "Offline"?" status_offline":""}`}>
+            <div className={`status ${status === "offline"?"status_offline":""}`}>
                 {status}
             </div>
         )
