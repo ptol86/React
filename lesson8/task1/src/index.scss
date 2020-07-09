@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    height: 48px;
+    background-color: rgb(241, 83, 10);
+    color: white;
+    border-radius: 8px;
+    width: 120px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+.life {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    font-size: 30px;
+    color: cornflowerblue;
+}
