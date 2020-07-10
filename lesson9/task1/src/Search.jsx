@@ -25,7 +25,7 @@ class Search extends React.Component {
                     value={this.state.value} 
                     onChange={this.handleChange}
                  />
-                <button type={"submit"} className="search__button">Search</button>
+                <button className="search__button">Search</button>
             </form>
         )
     }
