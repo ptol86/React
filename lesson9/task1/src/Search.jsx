@@ -3,7 +3,7 @@
 import React from "react";
 
 class Search extends React.Component {
-    state = { value: "" }
+    state = { value: "good restaurant" }
 
     handleChange = event => {
        this.setState({
