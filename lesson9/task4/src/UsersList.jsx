@@ -19,7 +19,7 @@ class UsersList extends React.Component {
     render() {
         let usersList = this.props.users;
         if (this.state.value.length > 0) {
-            usersList = usersList.filter(user => user.name.toLowerCase() === this.state.value.toLowerCase())}
+            usersList = usersList.filter(user => user.name.toLowerCase() == this.state.value.toLowerCase())}
         return (
             <>
                 <Filter filterText={this.state.value} count={usersList.length} onChange={this.onChange}/>
