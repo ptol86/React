@@ -16,16 +16,22 @@ class UsersList extends React.Component {
             value: event.target.value
         })
     } 
+
+   
     render() {
-        let usersList = this.props.users;
-        if (this.state.value.length > 0) {
-            usersList = usersList.filter(user => user.name.toLowerCase() == this.state.value.toLowerCase())}
+        let usersList = (this.state.value === ''
+        ? this.props.users
+        : this.props.users.filter(user => user.name.toLowerCase()
+          .includes(this.state.value.toLowerCase())))
+          .map(
+            user => <User key={user.id}
+              {...user} />
+          );
         return (
             <>
                 <Filter filterText={this.state.value} count={usersList.length} onChange={this.onChange}/>
                 <ul className="users">
-                {usersList.map(user => 
-                <User key={user.id} {...user}/>)}
+                {usersList}
                 </ul>
             </>
             
