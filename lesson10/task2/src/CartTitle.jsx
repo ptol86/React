@@ -4,7 +4,7 @@ const CartTitle = ({userName, count}) => {
     
     return (
         <h1 className="cart-title">
-            {`${userName}, you added ${count} products`}
+            {`${userName}, you added ${count} items`}
         </h1>
 
     )
