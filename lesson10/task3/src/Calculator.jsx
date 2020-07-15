@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import BoilingVerdict from "./BoilingVerdict";
 import TemperatureInput from "./TemperatureInput";
-
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
