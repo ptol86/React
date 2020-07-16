@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const ProductCategoryRow = ({category}) => {
-  
     return (
       <tr>
         <th colSpan="2">
@@ -9,10 +8,7 @@ const ProductCategoryRow = ({category}) => {
         </th>
       </tr>
     );
-  
-}
+};
+
 
 export default ProductCategoryRow;
-
-
-  
