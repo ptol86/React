@@ -17,7 +17,7 @@ class Expand extends React.Component {
         return (
             <div className="expand border">
                 <div className="expand__header">
-                {title}
+                <span className="expand__title">{title}</span>
                 <button className="expand__toggle-btn" onClick={this.toggleButton}>
                     {isVisible && <i className="fa fa-chevron-up"></i> || <i className="fa fa-chevron-down"></i>}
                 </button>
