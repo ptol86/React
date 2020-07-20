@@ -5,7 +5,7 @@ import { Link, Route, Switch } from "react-router-dom";
 const Users = ({match}) => {
     return (
       <div className="page__content">
-          <h1>Products</h1>
+          <h1>Users</h1>
           <ul className="navigation">
               <li className="navigation__item">
                 <Link to={`${match.url}/github`}>Github</Link>
