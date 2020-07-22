@@ -14,12 +14,15 @@ const Clock = ({offset, location}) => {
     
     useEffect(() => {
         
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setTime(
                 moment(getTimeWithOffset(offset)).format("h:mm:ss A")
             )
         }, 1000);
-
+        
+        return () => {
+            clearInterval(intervalId)
+          }
     }, [])
     
     
