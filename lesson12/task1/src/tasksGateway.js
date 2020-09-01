@@ -5,7 +5,7 @@ export const createTask = taskData => {
     return fetch(baseUrl, {
         method: "POST",
         headers: {
-            "Content-type": "application/json;utc-8"
+            "Content-type": "application/json"
         },
         body: JSON.stringify(taskData),
     }).then(response => {
@@ -28,7 +28,7 @@ export const updateTask = (taskId, taskData) => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: "PUT",
         headers: {
-            "Content-type": "application/json;utc-8"
+            "Content-type": "application/json"
         },
         body: JSON.stringify(taskData),
     }).then(response => {
